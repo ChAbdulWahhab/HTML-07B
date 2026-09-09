@@ -1,0 +1,69 @@
+<html lang="en">
+<head>
+    <title>Pseudo Classes</title>
+    <style>
+        button {
+            outline: none;
+
+            background-color: blueviolet;
+            color: white;
+            border: 1px solid rgba(194, 129, 255, 0.808);
+            border-radius: 6px;
+            padding: 5px 10px;
+            box-shadow: 0px 8px 15px 0 rgb(195, 195, 195);
+            transition: 0.2s all linear;
+
+            &:hover {
+                background-color: rgba(194, 129, 255, 0.808);
+                border: 1px solid blueviolet;
+                /* box-shadow: 0px 11px 15px 4px rgb(195, 195, 195); */
+                cursor: pointer;
+            }
+
+            &:active {
+                background-color: tomato;
+            }
+        }
+
+        input {
+            margin-top: 50px;
+            padding: 5px 10px;
+            font-size: 18px;
+            border-radius: 8px;
+            border: 2px solid blueviolet;
+            outline: none;
+            transition: 0.9s all linear;
+            
+            &:focus {
+                border: 2px solid mediumseagreen;
+            }
+        }
+
+
+        a:link {
+            color: blueviolet;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:visited {
+            color: tomato;
+        }
+
+        a:hover {
+            text-decoration: underline; /* Add underline back on hover */
+        }
+
+        /* 4. Style when the link is being clicked (Must come AFTER hover) */
+        a:active {
+            color: #ea4335;             /* Red text at the exact moment of click */
+        }
+    </style>
+</head>
+<body>
+    <button>Register</button>
+    <input type="text" placeholder="Enter Name">
+    <a href="https://thissiteiscompletelyfake12345.com">Unvisited</a><br>
+    <a href="https://www.google.com">Visited</a>
+</body>
+</html>
